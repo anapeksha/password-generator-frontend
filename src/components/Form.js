@@ -109,6 +109,10 @@ const Form = () => {
 								marginRight: "0.5em",
 								marginLeft: "0.5em",
 							}}
+							inputProps={{
+								inputMode: "numeric",
+								pattern: "[0-9]*",
+							}}
 						></TextField>
 						<Button
 							variant="contained"
