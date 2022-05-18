@@ -47,6 +47,7 @@ const Form = () => {
 		getData(inputs.length, inputs.characters, setError).then((data) => {
 			if (data === null) {
 				setError(true);
+				isPasswordCreated(false);
 			} else {
 				isPasswordCreated(true);
 				setOutput(data.password);
