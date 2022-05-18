@@ -45,7 +45,7 @@ const Form = () => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		getData(inputs.length, inputs.characters, setError).then((data) => {
-			if (data === null) {
+			if (data === undefined) {
 				setError(true);
 				isPasswordCreated(false);
 			} else {
