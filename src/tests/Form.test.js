@@ -2,6 +2,8 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Form from "../components/Form";
 
+jest.setTimeout(15000);
+
 test("Check if Password is defined and if it has correct length", async () => {
 	const length = "12",
 		characters = "abcdABCD1234";
