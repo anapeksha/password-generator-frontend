@@ -92,7 +92,13 @@ corepack enable
    yarn start
    ```
 
-6. Create a production build
+6. Test the app
+
+   ```sh
+   yarn test
+   ```
+
+7. Create a production build
    ```sh
    yarn build
    ```
