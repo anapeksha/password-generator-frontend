@@ -17,7 +17,7 @@
 -->
 
 [![MIT License][license-shield]][license-url]
-(![GitHub Workflow Status](https://img.shields.io/github/workflow/status/anapeksha/password-generator-frontend/build?style=plastic))
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/anapeksha/password-generator-frontend/build?style=plastic)
 
 <!-- TABLE OF CONTENTS -->
 <details>
