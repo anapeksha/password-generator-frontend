@@ -116,6 +116,7 @@ const Form = () => {
 						></TextField>
 						<Button
 							variant="contained"
+							name="submit-button"
 							type="submit"
 							color="secondary"
 							style={{
@@ -134,6 +135,7 @@ const Form = () => {
 							value={output}
 							color="secondary"
 							variant="outlined"
+							label="Password"
 							focused
 							size="medium"
 							sx={{
