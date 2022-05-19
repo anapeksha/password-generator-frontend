@@ -35,6 +35,9 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
+    - name: Run tests
+      run: yarn test
+
     - name: Build and Deploy
       run: |
         git config --global user.name $user_name
