@@ -23,7 +23,7 @@ test("Check if Password is defined and if it has correct length", async () => {
 	const password = await screen.findByRole(
 		"textbox",
 		{ name: /Password/i },
-		{ timeout: 30000 }
+		{ timeout: 60000 }
 	);
 	//find Password textbox
 
@@ -31,4 +31,4 @@ test("Check if Password is defined and if it has correct length", async () => {
 
 	// @ts-ignore
 	expect(password.value.length).toEqual(Number(length)); //does it have correct length?
-}, 30000);
+}, 60000);
