@@ -16,8 +16,8 @@ import "../styles/form.css";
 
 const Form = () => {
 	const [inputs, setInputs] = useState({
-		characters: null,
-		length: null,
+		characters: "",
+		length: 0,
 	});
 	const [createPassword, isPasswordCreated] = useState(false);
 	const [copyPassword, hasCopied] = useState(false);
