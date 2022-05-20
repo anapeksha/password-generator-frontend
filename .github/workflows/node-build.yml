@@ -33,7 +33,10 @@ jobs:
     - uses: c-hive/gha-yarn-cache@v2 #cache node_modules
 
     - name: Install dependencies
-      run: yarn install --production=true
+      run: yarn install
+
+    - name: Test the App
+      run: yarn test
 
     - name: Build and Deploy
       run: |
