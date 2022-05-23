@@ -5,16 +5,15 @@ name: build
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths-ignore:
       - README.md
       - screenshots/project-screenshot.png
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     strategy:
@@ -23,31 +22,28 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-        
-    - uses: c-hive/gha-yarn-cache@v2 #cache node_modules
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
-    - name: Install dependencies
-      run: yarn install
+      - uses: c-hive/gha-yarn-cache@v2 #cache node_modules
 
-    - name: Test the App
-      run: yarn test
+      - name: Install dependencies
+        run: yarn install
 
-    - name: Build and Deploy
-      run: |
-        git config --global user.name $user_name
-        git config --global user.email $user_email
-        git remote set-url origin https://${github_token}@github.com/${repository}
-        yarn deploy
-      env:
-        CI: false
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        repository: ${{ github.repository }}
-        REACT_APP_API_URI: ${{secrets.REACT_APP_API_URI}}
+      - name: Build and Deploy
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          yarn deploy
+        env:
+          CI: false
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          REACT_APP_API_URI: ${{secrets.REACT_APP_API_URI}}
