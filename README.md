@@ -124,6 +124,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/anapeksha/password-generator-frontend.svg
+[license-shield]: https://img.shields.io/github/license/anapeksha/password-generator-frontend.svg?style=plastic
 [license-url]: https://github.com/anapeksha/password-generator-frontend/blob/main/LICENSE
 [product-screenshot]: https://github.com/anapeksha/password-generator-frontend/blob/main/screenshots/project-screenshot.png
