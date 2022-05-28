@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import "../styles/navbar.css";
 
 const Navbar = () => {
 	return (
@@ -15,7 +14,7 @@ const Navbar = () => {
 				style={{ backgroundColor: "#262626" }}
 			>
 				<Toolbar>
-					<Box className="navbar-icon">
+					<Box style={{paddingRight: "0.5em"}}>
 						<LockOutlinedIcon style={{ color: "#88019F" }} />
 					</Box>
 					<Typography

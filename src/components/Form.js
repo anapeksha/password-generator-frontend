@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { getData } from "../controller/getData";
-import "../styles/form.css";
+import Wrapper from "../styles/Wrapper.style";
 
 const Form = () => {
 	const [inputs, setInputs] = useState({
@@ -65,9 +65,16 @@ const Form = () => {
 
 	return (
 		<div>
-			<Box className="form-body">
+			<Wrapper>
 				<form onSubmit={handleSubmit}>
-					<FormGroup className="form">
+					<FormGroup
+						style={{
+							borderStyle: "solid",
+							borderColor: "#88019F",
+							padding: "10px",
+							borderRadius: "7.5px",
+						}}
+					>
 						<TextField
 							value={inputs.characters}
 							name="characters"
@@ -130,7 +137,7 @@ const Form = () => {
 					</FormGroup>
 				</form>
 				{createPassword && (
-					<Box className="password-generated">
+					<Box>
 						<TextField
 							value={output}
 							color="secondary"
@@ -164,7 +171,7 @@ const Form = () => {
 						></TextField>
 					</Box>
 				)}
-			</Box>
+			</Wrapper>
 			<Snackbar
 				anchorOrigin={{ vertical: "top", horizontal: "right" }}
 				open={error}
